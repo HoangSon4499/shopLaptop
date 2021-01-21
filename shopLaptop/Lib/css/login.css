@@ -1,0 +1,92 @@
+﻿
+.mybg{
+	background: #efefff !important;
+	margin: 10px 0;
+}
+.mybg2{
+	background: orange;
+}
+.myrow{
+	height: 100px;
+	border: 1px solid #55f;
+	
+}
+.myborder{
+	border: 1px solid #dee2e6 !important;
+	padding: 10px;
+}
+
+.mt-23{margin-top: 23px;}
+.mt-flex{margin-top: 100px;}
+
+.size200{
+	width: 100px;
+}
+.mytitle{
+	background: #DF0101;
+	padding-top:10px;
+	padding-bottom: 10px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.row1{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.ml{
+	margin-left:0px !important;
+}
+.ml-10{
+	margin-left:10px !important;
+}
+.ml-15{
+	margin-left:15px !important;
+}
+.ml-20{
+	margin-left:20px !important;
+}
+.mr{
+	margin-right:0px !important;
+}
+.mr-10{
+	margin-right:10px !important;
+}
+.mr-15{
+	margin-right:15px !important;
+}
+.mr-20{
+	margin-right:20px !important;
+}
+.aa{
+	text-align:right !important;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.frmLogin .form-group label , .frmProvider .form-group label, .frmInformation .form-group label, .frmInformation2 .form-group label {
+		text-align:left !important;
+		}
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.frmLogin .form-group label , .frmProvider .form-group label, .frmInformation .form-group label, .frmInformation2 .form-group label {
+		text-align:left !important;
+		}
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+	
+}
+
