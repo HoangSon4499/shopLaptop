@@ -193,7 +193,7 @@
             </div>
             <div class="row featured__filter">
                 <%foreach (var item in lstHangSX) { %>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix <%=item.tenHang %> maHang=<% = item.idHangSX %>">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix <%=item.tenHang %> <%= maHang= item.idHangSX %>">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="/Lib/img/featured/feature-1.jpg">
                             <ul class="featured__item__pic__hover">

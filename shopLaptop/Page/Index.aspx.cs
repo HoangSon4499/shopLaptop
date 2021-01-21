@@ -44,7 +44,8 @@ namespace shopLaptop.Page
                 hang = new HangSX(idHangSX, tenHangSX, anh);
                 lstHangSX.Add(hang);
             }
-            string maHang = Request.QueryString["maHang"];
+
+
             foreach (DataRow dr in homeController.getSpByHangSX(int.Parse(maHang)).Rows)
             {
                 SanPham SpByHangSX = null;
