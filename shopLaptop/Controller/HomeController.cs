@@ -50,5 +50,25 @@ namespace shopLaptop.Controller
 
             return dt;
         }
+
+        public DataTable getSpBy8()
+        {
+            String sql = "SELECT * FROM SanPham LIMIT 8";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable getSpBy3()
+        {
+            String sql = "SELECT * FROM SanPham LIMIT 3";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            return dt;
+        }
     }
 }

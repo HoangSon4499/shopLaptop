@@ -7,12 +7,13 @@ namespace shopLaptop.Entity
 {
     public class SanPham
     {
-        public SanPham(int idSP, string tenSP, int gia, string anh)
+        public SanPham(int idSP, string tenSP, int gia, string anh, int maHang)
         {
             idsp = idSP;
             this.tenSP = tenSP;
             this.gia = gia;
             this.anh = anh;
+            this.maHang = maHang;
         }
 
         public int idsp { get; set; }

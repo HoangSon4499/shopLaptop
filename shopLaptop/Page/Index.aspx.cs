@@ -14,12 +14,16 @@ namespace shopLaptop.Page
     {
         public List<TheLoai> lstTheLoai;
         public List<HangSX> lstHangSX;
+        public List<SanPham> lstSanPham8;
+        public List<SanPham> lstSanPham3;
         public List<SanPham> lstSanPhamByHang;
         
         protected void Page_Load(object sender, EventArgs e)
         {
             lstTheLoai = new List<TheLoai>();
             lstHangSX = new List<HangSX>();
+            lstSanPham8 = new List<SanPham>();
+            lstSanPham3 = new List<SanPham>();
             lstSanPhamByHang = new List<SanPham>();
             HomeController homeController = new HomeController();
             foreach(DataRow dr in homeController.getAllTheLoai().Rows)
@@ -46,7 +50,7 @@ namespace shopLaptop.Page
             }
 
 
-            foreach (DataRow dr in homeController.getSpByHangSX(int.Parse(maHang)).Rows)
+            foreach (DataRow dr in homeController.getSpByHangSX(int.Parse("3")).Rows)
             {
                 SanPham SpByHangSX = null;
 
@@ -54,9 +58,38 @@ namespace shopLaptop.Page
                 string tenSP = dr["tenSP"].ToString();
                 int gia = int.Parse(dr["gia"].ToString());
                 string anh = dr["anh"].ToString();
+                int maHang = int.Parse(dr["maHang"].ToString());
 
-                SpByHangSX = new SanPham(idSP, tenSP, gia,anh);
+                SpByHangSX = new SanPham(idSP, tenSP, gia,anh, maHang);
                 lstSanPhamByHang.Add(SpByHangSX);
+            }
+
+            foreach (DataRow dr in homeController.getSpBy8().Rows)
+            {
+                SanPham SpBy8 = null;
+
+                int idSP = int.Parse(dr["idSP"].ToString());
+                string tenSP = dr["tenSP"].ToString();
+                int gia = int.Parse(dr["gia"].ToString());
+                string anh = dr["anh"].ToString();
+                int maHang = int.Parse(dr["maHang"].ToString());
+
+                SpBy8 = new SanPham(idSP, tenSP, gia, anh, maHang);
+                lstSanPham8.Add(SpBy8);
+            }
+
+            foreach (DataRow dr in homeController.getSpBy3().Rows)
+            {
+                SanPham SpBy3 = null;
+
+                int idSP = int.Parse(dr["idSP"].ToString());
+                string tenSP = dr["tenSP"].ToString();
+                int gia = int.Parse(dr["gia"].ToString());
+                string anh = dr["anh"].ToString();
+                int maHang = int.Parse(dr["maHang"].ToString());
+
+                SpBy3 = new SanPham(idSP, tenSP, gia, anh, maHang);
+                lstSanPham3.Add(SpBy3);
             }
         }
     }

@@ -134,8 +134,8 @@
     <Content Include="Lib\css\style.css" />
     <Content Include="Lib\fonts\ElegantIcons.svg" />
     <Content Include="Lib\fonts\fontawesome-webfont.svg" />
-    <Content Include="Lib\img\banner\banner-1.jpg" />
     <Content Include="Lib\img\banner\banner-2.jpg" />
+    <Content Include="Lib\img\banner\banner-1.jpg" />
     <Content Include="Lib\img\blog\blog-1.jpg" />
     <Content Include="Lib\img\blog\blog-2.jpg" />
     <Content Include="Lib\img\blog\blog-3.jpg" />
@@ -213,11 +213,13 @@
     <Content Include="Lib\js\main.js" />
     <Content Include="Lib\js\mixitup.min.js" />
     <Content Include="Lib\js\owl.carousel.min.js" />
+    <Content Include="Page\DanhSachSP.aspx" />
     <Content Include="Page\Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\DbConnection.cs" />
+    <Compile Include="Controller\DanhSachSPController.cs" />
     <Compile Include="Controller\HomeController.cs" />
     <Compile Include="Entity\GioHang.cs" />
     <Compile Include="Entity\HangSX.cs" />
@@ -225,6 +227,13 @@
     <Compile Include="Entity\SanPham.cs" />
     <Compile Include="Entity\TheLoai.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Page\DanhSachSP.aspx.cs">
+      <DependentUpon>DanhSachSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\DanhSachSP.aspx.designer.cs">
+      <DependentUpon>DanhSachSP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
