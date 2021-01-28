@@ -171,6 +171,7 @@
     <Content Include="Lib\img\featured\feature-7.jpg" />
     <Content Include="Lib\img\featured\feature-8.jpg" />
     <Content Include="Lib\img\hero\banner-nen-laptop.png" />
+    <Content Include="Lib\img\icon\filter.svg" />
     <Content Include="Lib\img\language.png" />
     <Content Include="Lib\img\latest-product\lp-1.jpg" />
     <Content Include="Lib\img\latest-product\lp-2.jpg" />
@@ -214,6 +215,7 @@
     <Content Include="Lib\js\mixitup.min.js" />
     <Content Include="Lib\js\owl.carousel.min.js" />
     <Content Include="Page\DanhSachSP.aspx" />
+    <Content Include="Page\DanhSachSPByTTVaHangSX.aspx" />
     <Content Include="Page\Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -233,6 +235,13 @@
     </Compile>
     <Compile Include="Page\DanhSachSP.aspx.designer.cs">
       <DependentUpon>DanhSachSP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\DanhSachSPByTTVaHangSX.aspx.cs">
+      <DependentUpon>DanhSachSPByTTVaHangSX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\DanhSachSPByTTVaHangSX.aspx.designer.cs">
+      <DependentUpon>DanhSachSPByTTVaHangSX.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>

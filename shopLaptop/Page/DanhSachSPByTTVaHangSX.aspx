@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DanhSachSP.aspx.cs" Inherits="shopLaptop.Page.DanhSachSP" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DanhSachSPByTTVaHangSX.aspx.cs" Inherits="shopLaptop.Page.DanhSachSPByTTVaHangSX" %>
 
 <!DOCTYPE html>
 
@@ -310,7 +310,7 @@
                     </div>
                    
                     <div class="row">
-                        <%foreach (var items in lstSanPhamByTheLoai)
+                        <%foreach (var items in lstSpByTlAndHsx)
                             { %>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">

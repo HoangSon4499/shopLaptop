@@ -20,5 +20,14 @@ namespace shopLaptop.Controller
             adapter.Fill(dt);
             return dt;
         }
+
+        public DataTable getSanPhamByTheLoaiAndHangSX(int maTheLoai, int maHangSX)
+        {
+            String sql = "SELECT * FROM SanPham WHERE maTheLoai=" + maTheLoai+" AND maHang="+maHangSX;
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
     }
 }

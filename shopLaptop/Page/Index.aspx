@@ -107,7 +107,14 @@
                         <ul>
                             <%foreach (var items in lstTheLoai)
                                 { %>
-                            <li><a href="DanhSachSP.aspx?param=<%=items.idTheLoai %>"><%= items.tenTheLoai %></a></li>
+                            <li><a href="DanhSachSP.aspx?param=<%=items.idTheLoai %>"><%= items.tenTheLoai %></a>
+                                <ul>
+                                    <%foreach (var itemHangSX in lstHangSX)
+                                        { %>
+                                            <li><a href="DanhSachSPByTTVaHangSX.aspx?param1=<%=items.idTheLoai %>?param2=<%=itemHangSX.idHangSX %>" ><%=itemHangSX.tenHang %></a></li>
+                                    <%} %>
+                                </ul>
+                            </li>
                                 <%} %>
                         </ul>
                     </div>
