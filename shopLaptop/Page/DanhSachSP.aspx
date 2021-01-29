@@ -268,7 +268,7 @@
                             <div class="col-lg-3 col-md-3">
                                 <div class="filter__sort">
                                     <span>Hãng</span>
-                                    <select >
+                                    <select>
                                         <option value="0">DELL</option>
                                         <option value="0">ASUS</option>
                                         <option value="0">HP</option>
