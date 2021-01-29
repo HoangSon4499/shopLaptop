@@ -1,12 +1,14 @@
-﻿using shopLaptop.Controller;
+﻿using MySql.Data.MySqlClient;
+using shopLaptop.Connection;
+using shopLaptop.Controller;
 using shopLaptop.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
+
+
+
 
 namespace shopLaptop.Page
 {
@@ -16,6 +18,8 @@ namespace shopLaptop.Page
         public List<TheLoai> lstTheLoai;
         public List<SanPham> lstSPBy8;
         public List<SanPham> lstSanPham3;
+        public List<HangSX> lstHangSX;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             DanhSachSPController DanhSachSPController = new DanhSachSPController();
@@ -24,6 +28,8 @@ namespace shopLaptop.Page
             lstTheLoai = new List<TheLoai>();
             lstSPBy8 = new List<SanPham>();
             lstSanPham3 = new List<SanPham>();
+            lstHangSX = new List<HangSX>();
+
             string maTheLoai = Request.QueryString["param"];
             foreach (DataRow dr in DanhSachSPController.getSanPhamByTheLoai(int.Parse(maTheLoai)).Rows)
             {
@@ -75,6 +81,30 @@ namespace shopLaptop.Page
                 SpBy3 = new SanPham(idSP, tenSP, gia, anh, maHang);
                 lstSanPham3.Add(SpBy3);
             }
+
+            foreach(DataRow dr in homeController.getAllHang().Rows)
+            {
+                HangSX hang = null;
+                int idHangSX = int.Parse(dr["idHangSX"].ToString());
+                string tenHangSX = dr["tenHang"].ToString();
+                string anh = dr["anh"].ToString();
+
+                hang = new HangSX(idHangSX, tenHangSX, anh);
+                lstHangSX.Add(hang);
+            }
         }
+
+        //public void LoadDdlHangSX()
+        //{
+        //    conn = DbConnection.GetDBConnection();
+        //    string sql = "SELECT * FROM HangSX";
+        //    MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+        //    DataTable dt = new DataTable();
+        //    adapter.Fill(dt);
+        //    ddlHangSX.DataSource = dt;
+        //    ddlHangSX.DataTextField = "tenHang";
+        //    ddlHangSX.DataValueField = "idHangSX";
+        //    ddlHangSX.DataBind();
+        //}
     }
 }

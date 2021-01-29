@@ -268,7 +268,7 @@
                             <div class="col-lg-3 col-md-3">
                                 <div class="filter__sort">
                                     <span>Hãng</span>
-                                    <select>
+                                    <select >
                                         <option value="0">DELL</option>
                                         <option value="0">ASUS</option>
                                         <option value="0">HP</option>
@@ -281,7 +281,7 @@
                             <div class="col-lg-3 col-md-3">
                                 <div class="filter__sort">
                                     <span>Giá</span>
-                                    <select>
+                                    <select runat="server">
                                         <option value="0">Dưới 10 triệu</option>
                                         <option value="0">Từ 10 - 15 triệu</option>
                                         <option value="0">Từ 15 - 20 triệu</option>
@@ -303,7 +303,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3">
                                 <div class="filter__option">
-                                    <button><img src="img/icon/filter.svg">LỌC</button>
+                                    <button><img src="/Lib/img/icon/filter.svg">LỌC</button>
                                 </div>
                             </div>
                         </div>

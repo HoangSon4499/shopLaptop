@@ -11,6 +11,8 @@ namespace shopLaptop.Controller
     public class HomeController
     {
         MySqlConnection conn = DbConnection.GetDBConnection();
+
+
         public DataTable getAllSP()
         {
             String sql = "SELECT * FROM SanPham ";

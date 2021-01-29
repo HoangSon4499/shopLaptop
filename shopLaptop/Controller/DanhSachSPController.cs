@@ -14,7 +14,7 @@ namespace shopLaptop.Controller
 
         public DataTable getSanPhamByTheLoai(int maTheLoai)
         {
-            String sql = "SELECT * FROM SanPham WHERE maTheLoai=" + maTheLoai;
+            string sql = "SELECT * FROM SanPham WHERE maTheLoai=" + maTheLoai;
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -23,7 +23,7 @@ namespace shopLaptop.Controller
 
         public DataTable getSanPhamByTheLoaiAndHangSX(int maTheLoai, int maHangSX)
         {
-            String sql = "SELECT * FROM SanPham WHERE maTheLoai=" + maTheLoai+" AND maHang="+maHangSX;
+            string sql = "SELECT * FROM SanPham WHERE maTheLoai=" + maTheLoai+" AND maHang="+maHangSX;
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);

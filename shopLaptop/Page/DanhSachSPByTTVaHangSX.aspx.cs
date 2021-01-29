@@ -20,7 +20,10 @@ namespace shopLaptop.Page
         {
             DanhSachSPController DanhSachSPController = new DanhSachSPController();
             HomeController homeController = new HomeController();
-
+            lstSpByTlAndHsx = new List<SanPham>();
+            lstTheLoai = new List<TheLoai>();
+            lstSPBy8 = new List<SanPham>();
+            lstSanPham3 = new List<SanPham>();
             string maTheLoai = Request.QueryString["param1"];
             string maHangSX = Request.QueryString["param2"];
             foreach (DataRow dr in DanhSachSPController.getSanPhamByTheLoaiAndHangSX(int.Parse(maTheLoai), int.Parse(maHangSX)).Rows)

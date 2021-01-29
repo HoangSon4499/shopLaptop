@@ -111,7 +111,7 @@
                                 <ul>
                                     <%foreach (var itemHangSX in lstHangSX)
                                         { %>
-                                            <li><a href="DanhSachSPByTTVaHangSX.aspx?param1=<%=items.idTheLoai %>?param2=<%=itemHangSX.idHangSX %>" ><%=itemHangSX.tenHang %></a></li>
+                                            <li><a href="DanhSachSPByTTVaHangSX.aspx?param1=<%=items.idTheLoai %>&param2=<%=itemHangSX.idHangSX %>" ><%=itemHangSX.tenHang %></a></li>
                                     <%} %>
                                 </ul>
                             </li>
